@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login form</title>
+    <!-- tailwind cdn import  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="h-[100vh] flex">
+      <!-- login image on left half of the screen -->
+      <div class="w-[50%] bg-[#eff1f7] flex items-center justify-center">
+        <img src="assest/login-left-img.svg" alt="login img" />
+      </div>
+      <!-- login form on right half of the screen -->
+      <div class="w-[50%]">
+        <div class="flex flex-col justify-center items-center h-[100%]">
+          <div>
+            <img src="assest/rd-logo.svg" alt="radius-direct" />
+          </div>
+
+          <!-- login form code -->
+          <div class="flex flex-col w-[50%] space-y-2 mt-10">
+            <label>Email <span class="text-red-600">*</span></label>
+            <div class="relative">
+              <span
+                class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"
+              >
+                <!-- font awesome envelope icon for email input field -->
+                <i class="fas fa-envelope"></i>
+              </span>
+              <input
+                type="email"
+                class="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col w-[50%] space-y-2 mt-5">
+            <label for="password"
+              >Password <span class="text-red-600">*</span></label
+            >
+            <!-- font awesome lock icon for  password input field -->
+            <div class="relative">
+              <span
+                class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400"
+              >
+                <i class="fa-solid fa-lock"></i>
+              </span>
+              <input
+                id="password"
+                type="password"
+                class="pl-10 pr-10 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <!-- font awesome eye icon to toggle password visibility -->
+              <span
+                class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400"
+              >
+                <i class="fa-solid fa-eye-slash"></i>
+              </span>
+            </div>
+
+            <!-- login button -->
+            <div class="w-[100%] flex flex-col items-center">
+              <button
+                class="text-white bg-[#2463eb] w-[100%] py-2 rounded-lg mt-5"
+              >
+                LOG IN →
+              </button>
+              <p class="mt-5 cursor-pointer">Forgot Password?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
